@@ -57,4 +57,24 @@ public class lista {
     }
     }
     
+    private void Buscar(int numero, int llave)
+    {
+        System.out.println("metodo Buscar ");
+        if(this.header.get_siguiente()==null)
+        {
+         //   Nodo temp= new Nodo(numero,llave);
+         //   this.header.set_siguiente(temp);
+            this.header.set_siguiente(new Nodo(numero,llave));
+            
+        }
+        else
+        {
+            aux=this.header.get_siguiente();
+            while(aux!=null)
+            {
+            aux=aux.get_siguiente();
+            }
+            aux.set_siguiente(new Nodo(numero,llave));
+        }
+    }
 }
